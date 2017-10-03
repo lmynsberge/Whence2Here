@@ -9,25 +9,94 @@ import { FlightService } from './flight.service';
 @Component({
   selector: 'flyer-detail',
   template: `
-  <div *ngIf="flyer">
+  <div class="flyer-details" *ngIf="flyer">
+    <!-- Header of a flyer -->
+    <div class="flyer-header" [class.selected]="isSelected" >
+      <div class="remove"
+        (click)="onRemove()">
+        -
+      </div>
+      <div 
+        (click)="onSelect()">
+        <span class="badge">{{flyer.startingLocation}}</span>
+          {{flyer.name}}
+      </div>
+      
+    </div>
 
-   <h2>{{flyer.name}} Details!</h2>
-    <div>
-      <label>id: </label>
-      {{flyer.id}}
+    <!-- Content of a flyer -->
+    <div class="flyer-content" [class.nodisp]="!isSelected">
+      <div>
+        <input [(ngModel)]="flyer.name" placeholder="Name" />
+      </div>
+      <div>
+        <input [(ngModel)]="flyer.startingLocation" placeholder="Starting location" />
+      </div>
     </div>
-    <div>
-      <label>name: </label>
-      <input [(ngModel)]="flyer.name" placeholder="name" />
-    </div>
-
-    </div>
-  `
+  </div>
+  
+  `,
+  styles: [`
+  .flyer-details {
+    color: black;
+    display: inline-block;
+  }
+  .nodisp {
+    display: none;
+  }
+  .selected {
+    color:white;
+  }
+  div.flyer-header {
+    left: 0;
+    background-color: #EEE;
+    height: 1.6em;
+    border-radius: 4px;
+    width: 19em;
+    color: black;
+    margin: 0.5em 0.5em 0 0.5em;
+    cursor: pointer;
+  }
+  div.flyer-header.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+  }
+  div.flyer-header:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  div.flyer-header div {
+    display: inline-block;
+    font-size: small;
+    position: relative;
+  }
+  div .remove {
+    border-radius: 4px 0 0 4px;
+    width: 1em;
+    background-color: darkred;
+    color: white;
+    height: 1.8em;
+    padding: 0.2em 0 0 0.5em;
+  }
+  div .badge {
+    font-style: italic;
+    width: 18em;
+  }
+  div.flyer-content {
+    margin: 0 0 0 1.7em;
+    border-radius: 0 0 4px 4px;
+    background-color: #BBD8DC;
+    width: 16.5em;
+    padding: 0.5em;
+  }
+  `]
 })
 
 export class FlyerDetailComponent implements OnInit {
 
   @Input() flyer: Flyer;
+  @Input() isSelected: boolean;
 
   constructor(
     private flightService: FlightService,
@@ -36,9 +105,17 @@ export class FlyerDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap
-      .switchMap((params: ParamMap) =>
-    this.flightService.getFlight(+params.get('id')))
-      .subscribe(flight => this.flyer = flight);
+    // this.route.paramMap
+    //   .switchMap((params: ParamMap) =>
+    // this.flightService.getFlights(+params.get('id')))
+    //   .subscribe(flight => this.flyer = flight);
+  }
+
+  onSelect(): void {
+    this.isSelected = !this.isSelected;
+  }
+
+  onRemove(): void {
+    this.flyer = null;
   }
 }

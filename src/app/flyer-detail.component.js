@@ -21,12 +21,16 @@ var FlyerDetailComponent = (function () {
         this.location = location;
     }
     FlyerDetailComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.paramMap
-            .switchMap(function (params) {
-            return _this.flightService.getFlight(+params.get('id'));
-        })
-            .subscribe(function (flight) { return _this.flyer = flight; });
+        // this.route.paramMap
+        //   .switchMap((params: ParamMap) =>
+        // this.flightService.getFlights(+params.get('id')))
+        //   .subscribe(flight => this.flyer = flight);
+    };
+    FlyerDetailComponent.prototype.onSelect = function () {
+        this.isSelected = !this.isSelected;
+    };
+    FlyerDetailComponent.prototype.onRemove = function () {
+        this.flyer = null;
     };
     return FlyerDetailComponent;
 }());
@@ -34,10 +38,15 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", flyer_1.Flyer)
 ], FlyerDetailComponent.prototype, "flyer", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], FlyerDetailComponent.prototype, "isSelected", void 0);
 FlyerDetailComponent = __decorate([
     core_1.Component({
         selector: 'flyer-detail',
-        template: "\n  <div *ngIf=\"flyer\">\n\n   <h2>{{flyer.name}} Details!</h2>\n    <div>\n      <label>id: </label>\n      {{flyer.id}}\n    </div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"flyer.name\" placeholder=\"name\" />\n    </div>\n\n    </div>\n  "
+        template: "\n  <div class=\"flyer-details\" *ngIf=\"flyer\">\n    <!-- Header of a flyer -->\n    <div class=\"flyer-header\" [class.selected]=\"isSelected\" >\n      <div class=\"remove\"\n        (click)=\"onRemove()\">\n        -\n      </div>\n      <div \n        (click)=\"onSelect()\">\n        <span class=\"badge\">{{flyer.startingLocation}}</span>\n          {{flyer.name}}\n      </div>\n      \n    </div>\n\n    <!-- Content of a flyer -->\n    <div class=\"flyer-content\" [class.nodisp]=\"!isSelected\">\n      <div>\n        <input [(ngModel)]=\"flyer.name\" placeholder=\"Name\" />\n      </div>\n      <div>\n        <input [(ngModel)]=\"flyer.startingLocation\" placeholder=\"Starting location\" />\n      </div>\n    </div>\n  </div>\n  \n  ",
+        styles: ["\n  .flyer-details {\n    color: black;\n    display: inline-block;\n  }\n  .nodisp {\n    display: none;\n  }\n  .selected {\n    color:white;\n  }\n  div.flyer-header {\n    left: 0;\n    background-color: #EEE;\n    height: 1.6em;\n    border-radius: 4px;\n    width: 19em;\n    color: black;\n    margin: 0.5em 0.5em 0 0.5em;\n    cursor: pointer;\n  }\n  div.flyer-header.selected:hover {\n    background-color: #BBD8DC !important;\n    color: white;\n  }\n  div.flyer-header:hover {\n    color: #607D8B;\n    background-color: #DDD;\n    left: .1em;\n  }\n  div.flyer-header div {\n    display: inline-block;\n    font-size: small;\n    position: relative;\n  }\n  div .remove {\n    border-radius: 4px 0 0 4px;\n    width: 1em;\n    background-color: darkred;\n    color: white;\n    height: 1.8em;\n    padding: 0.2em 0 0 0.5em;\n  }\n  div .badge {\n    font-style: italic;\n    width: 18em;\n  }\n  div.flyer-content {\n    margin: 0 0 0 1.7em;\n    border-radius: 0 0 4px 4px;\n    background-color: #BBD8DC;\n    width: 16.5em;\n    padding: 0.5em;\n  }\n  "]
     }),
     __metadata("design:paramtypes", [flight_service_1.FlightService,
         router_1.ActivatedRoute,

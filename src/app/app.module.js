@@ -11,6 +11,7 @@ var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var flyer_detail_component_1 = require("./flyer-detail.component");
+var flight_detail_component_1 = require("./flight-detail.component");
 var flights_component_1 = require("./flights.component");
 var flight_service_1 = require("./flight.service");
 var dashboard_component_1 = require("./dashboard.component");
@@ -33,6 +34,10 @@ AppModule = __decorate([
                     component: flights_component_1.FlightsComponent
                 },
                 {
+                    path: 'flights/:id',
+                    component: flight_detail_component_1.FlightDetailComponent
+                },
+                {
                     path: 'dashboard',
                     component: dashboard_component_1.DashboardComponent
                 },
@@ -42,7 +47,7 @@ AppModule = __decorate([
                 }
             ])
         ],
-        declarations: [app_component_1.AppComponent, flyer_detail_component_1.FlyerDetailComponent, flights_component_1.FlightsComponent, dashboard_component_1.DashboardComponent],
+        declarations: [app_component_1.AppComponent, flyer_detail_component_1.FlyerDetailComponent, flights_component_1.FlightsComponent, dashboard_component_1.DashboardComponent, flight_detail_component_1.FlightDetailComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [flight_service_1.FlightService]
     })
