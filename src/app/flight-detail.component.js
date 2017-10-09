@@ -29,9 +29,6 @@ var FlightDetailComponent = (function () {
     FlightDetailComponent.prototype.onSelect = function () {
         this.isSelected = !this.isSelected;
     };
-    FlightDetailComponent.prototype.onRemove = function () {
-        this.flight = null;
-    };
     return FlightDetailComponent;
 }());
 __decorate([
@@ -45,8 +42,8 @@ __decorate([
 FlightDetailComponent = __decorate([
     core_1.Component({
         selector: 'flight-detail',
-        template: "\n  <div class=\"flight-details\" *ngIf=\"flight\">\n    {{flight.price}}\n    {{flight.destination}}\n  </div>\n  \n  ",
-        styles: ["\n  \n  "]
+        template: "\n  <div class=\"flight-details\" *ngIf=\"flight\">\n    <!-- Header of a flight -->\n    <div class=\"flight-header\" [class.selected]=\"isSelected\" >\n      <div \n        (click)=\"onSelect()\">\n        <span class=\"badge\">{{flight.destination}}</span>\n          {{flight.totalPrice}}\n      </div>\n    </div>\n\n    <!-- Content of a flight -->\n    <div class=\"flight-content\" [class.nodisp]=\"!isSelected\">\n      <div class=\"flyers\"\n        *ngFor=\"let flyer of flight.userId\">\n        <div>{{flyer}}</div>\n      </div>\n      <div class=\"prices\"\n        *ngFor=\"let price of flight.userPrice\">\n        <div>{{price}}</div>\n      </div>\n    </div>\n  </div>\n  \n  ",
+        styles: ["\n  .flight-details {\n    color: black;\n    display: inline-block;\n    border-radius: 4px;\n    box-shadow: 1px 1px 5px 1px lightgray;\n    background-color: #EEE;\n  }\n  .nodisp {\n    display: none;\n  }\n  .selected {\n    color:white;\n  }\n  div.flight-header {\n    left: 0;\n    height: 1.6em;\n    width: 19em;\n    color: black;\n    margin: 0.5em 0.5em 0 0.5em;\n    cursor: pointer;\n  }\n  div.flight-header.selected:hover {\n    background-color: #BBD8DC !important;\n    color: white;\n  }\n  div.flight-header:hover {\n    color: #607D8B;\n    background-color: #DDD;\n    left: .1em;\n  }\n  div.flight-header div {\n    display: inline-block;\n    font-size: small;\n    position: relative;\n  }\n  div .badge {\n    font-style: italic;\n    width: 18em;\n  }\n  div.flight-content {\n    margin: 0 0 0 1.7em;\n    border-radius: 0 0 4px 4px;\n    background-color: #BBD8DC;\n    width: 16.5em;\n    padding: 0.5em;\n  }\n  "]
     }),
     __metadata("design:paramtypes", [flight_service_1.FlightService,
         router_1.ActivatedRoute,

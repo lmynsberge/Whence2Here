@@ -55,6 +55,7 @@ import { FlightService } from './flight.service';
     width: 19em;
     color: black;
     margin: 0.5em 0.5em 0 0.5em;
+    box-shadow: 1px 1px 5px 1px lightgray;
     cursor: pointer;
   }
   div.flyer-header.selected:hover {
@@ -86,6 +87,7 @@ import { FlightService } from './flight.service';
   div.flyer-content {
     margin: 0 0 0 1.7em;
     border-radius: 0 0 4px 4px;
+    box-shadow: 1px 1px 5px 1px lightgray;
     background-color: #BBD8DC;
     width: 16.5em;
     padding: 0.5em;
@@ -105,10 +107,6 @@ export class FlyerDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.route.paramMap
-    //   .switchMap((params: ParamMap) =>
-    // this.flightService.getFlights(+params.get('id')))
-    //   .subscribe(flight => this.flyer = flight);
   }
 
   onSelect(): void {

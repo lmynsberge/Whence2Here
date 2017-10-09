@@ -1,9 +1,9 @@
 import { Flight } from './flight';
 
 export const FLIGHTS: Flight[] = [
-  { id: 1, name: 'Flight1', price: 100.00, destination: "MSP"},
-  { id: 2, name: 'Flight2', price: 200.00, destination: "DEN"},
-  { id: 3, name: 'Flight3', price: 300.00, destination: "MKE"},
-  { id: 4, name: 'Flight4', price: 400.00, destination: "BOS"},
-  { id: 5, name: 'Flight5', price: 500.00, destination: "LGA"},
+  { id: 1, name: 'Flight1', totalPrice: 100.00, destination: 'MSP', userPrice: [50.00, 50.00], userId: [1, 2] },
+  { id: 2, name: 'Flight2', totalPrice: 200.00, destination: 'DEN', userPrice: [60.00, 140.00], userId: [1, 2] },
+  { id: 3, name: 'Flight3', totalPrice: 300.00, destination: 'MKE', userPrice: [100.00, 200.00], userId: [1, 2] },
+  { id: 4, name: 'Flight4', totalPrice: 400.00, destination: 'BOS', userPrice: [220.00, 180.00], userId: [1, 2] },
+  { id: 5, name: 'Flight5', totalPrice: 500.00, destination: 'LGA', userPrice: [450.00, 50.00], userId: [1, 2] },
 ];

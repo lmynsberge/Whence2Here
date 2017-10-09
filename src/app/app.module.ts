@@ -31,7 +31,7 @@ import { DashboardComponent } from './dashboard.component';
         component: DashboardComponent
       },
       {
-        path: 'detail/:id',
+        path: 'flyer/:id',
         component: FlyerDetailComponent
       }
     ])

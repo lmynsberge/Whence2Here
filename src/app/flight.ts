@@ -1,6 +1,8 @@
 export class Flight {
   id: number;
   name: string;
-  price: number;
+  totalPrice: number;
   destination: string;
+  userPrice: number[];
+  userId: number[];
 }

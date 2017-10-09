@@ -65,6 +65,7 @@ import { FlightService } from './flight.service';
       padding: .5em .5em 0 .5em;
       height: 1.6em;
       border-radius: 4px;
+      box-shadow: 1px 1px 5px 1px lightgray;
       width: 8em;
       color: darkgreen;
     }
