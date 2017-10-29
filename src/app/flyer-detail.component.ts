@@ -45,7 +45,7 @@ import { FlightService } from './flight.service';
     display: none;
   }
   .selected {
-    color:white;
+    color:grey;
   }
   div.flyer-header {
     left: 0;
