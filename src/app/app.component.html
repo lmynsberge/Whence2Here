@@ -1,18 +1,20 @@
-<div class="header">
-    <div class="title">
-        {{title}}
+<div class="app-container">
+    <div class="header">
+        <div class="title">
+            {{title}}
+        </div>
+        <div class="navigation">
+            <nav>
+                <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+                <a class="nav-link" routerLink="/flights">Flights</a>
+                <a class="nav-link" routerLink="/results">Results</a>
+            </nav>
+        </div>
     </div>
-    <div class="navigation">
-        <nav>
-            <a routerLink="/dashboard">Dashboard</a> |
-            <a routerLink="/flights">Flights</a> |
-            <a routerLink="/results">Results</a>
-        </nav>
+    <div class="content">
+        <router-outlet></router-outlet>
     </div>
-</div>
-<div class="content">
-    <router-outlet></router-outlet>
-</div>
-<div class="footer">
-    (c) 2017
+    <div class="footer">
+        (c) 2017
+    </div>
 </div>

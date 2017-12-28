@@ -7,14 +7,12 @@
 .tab-content {
     border: 2px solid black;
 }
-.tab-header {
-    display: inline-block;
-}
 .tab {
     /* border: 2px solid black; */
     margin: 10px;
 }
-.tab-heaer {
+.tab-header {
+    display: inline-block;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
