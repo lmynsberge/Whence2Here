@@ -1,21 +1,20 @@
 .tab-footer {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     padding: 5px;
 }
 .tab-content {
-    border: 2px solid black;
-}
-.tab {
-    /* border: 2px solid black; */
-    margin: 10px;
+    border: 1px solid #ccc;
 }
 .tab-header {
     display: inline-block;
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border-radius: 5px 5px 0px 0px;
+}
+.tab-header.selected {
+    border-bottom: none;
 }
 
 .tab-header div {
@@ -34,4 +33,28 @@
 
 .tab-header div.active {
     background-color: #ccc;
+}
+.left-content {
+    display: inline-block;
+    min-width: 20vw;
+    min-height: 90vh;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-left: -20px;
+}
+.right-content { 
+    min-height: 90vh;
+    width: auto;
+    display: inline-block;
+    overflow: hidden;
+}
+.search-results {
+    display: inline-block;
+}
+.flyers-footer {
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    max-height: 30px;
 }
