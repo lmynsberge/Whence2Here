@@ -1,5 +1,5 @@
 import {FlightResult} from './FlightResult';
-import {Flyer} from './../flyer';
+import {Flyer} from './flyer';
 
 export class FlyerFlightResult {
     id: number;

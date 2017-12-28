@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DestinationResult } from './Services/DestinationResult';
+import { DestinationResult } from './../../objects/DestinationResult';
 
 @Component({
   selector: 'flight-result',

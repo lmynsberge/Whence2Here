@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Flyer } from './flyer';
+import { Flyer } from './objects/flyer';
 import { Flight} from './flight';
-import { FlightService } from './flight.service';
+import { FlightService } from './services/flight.service';
 
 // const FLYERS: Flyer[] = [
 //   { id: 11, name: 'Hannah' },

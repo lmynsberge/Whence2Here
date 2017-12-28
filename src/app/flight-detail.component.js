@@ -13,7 +13,7 @@ var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
 require("rxjs/add/operator/switchMap");
 var flight_1 = require("./flight");
-var flight_service_1 = require("./flight.service");
+var flight_service_1 = require("./services/flight.service");
 var FlightDetailComponent = (function () {
     function FlightDetailComponent(flightService, route, location) {
         this.flightService = flightService;

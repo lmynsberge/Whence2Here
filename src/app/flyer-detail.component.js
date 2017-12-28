@@ -12,8 +12,8 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
 require("rxjs/add/operator/switchMap");
-var flyer_1 = require("./flyer");
-var flight_service_1 = require("./flight.service");
+var flyer_1 = require("./objects/flyer");
+var flight_service_1 = require("./services/flight.service");
 var FlyerDetailComponent = (function () {
     function FlyerDetailComponent(flightService, route, location) {
         this.flightService = flightService;

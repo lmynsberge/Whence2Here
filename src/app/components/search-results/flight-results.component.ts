@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DestinationResult } from './Services/DestinationResult';
-import { FlightService } from './flight.service';
+import { DestinationResult } from './../../objects/DestinationResult';
+import { FlightService } from './../../services/flight.service';
 
 @Component({
   selector: 'flight-results',

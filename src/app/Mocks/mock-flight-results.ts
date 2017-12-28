@@ -1,7 +1,7 @@
-import { DestinationResult } from './../Services/DestinationResult';
-import { FlyerFlightResult } from './../Services/FlyerFlightResult';
-import { Flyer } from './../flyer';
-import { FlightResult } from './../Services/FlightResult';
+import { DestinationResult } from './../objects/DestinationResult';
+import { FlyerFlightResult } from './../objects/FlyerFlightResult';
+import { Flyer } from './../objects/flyer';
+import { FlightResult } from './../objects/FlightResult';
 import { Flight } from './../flight';
 
 export const FLIGHTS: Flight[] = [

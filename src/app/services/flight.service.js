@@ -6,8 +6,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var mock_flights_1 = require("./mock-flights");
-var mock_flight_results_1 = require("./Mocks/mock-flight-results");
+var mock_flights_1 = require("./../mock-flights");
+var mock_flight_results_1 = require("./../mocks/mock-flight-results");
 var FlightService = (function () {
     function FlightService() {
     }

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
-import { Flight } from './flight';
-import { FLIGHTS } from './mock-flights';
-import { DESTINATIONRESULTS } from './Mocks/mock-flight-results';
-import { DestinationResult } from './Services/DestinationResult';
+import { Flight } from './../flight';
+import { FLIGHTS } from './../mock-flights';
+import { DESTINATIONRESULTS } from './../mocks/mock-flight-results';
+import { DestinationResult } from './../objects/DestinationResult';
 
 @Injectable()
 export class FlightService {

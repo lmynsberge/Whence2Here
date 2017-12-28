@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Flight } from './flight';
-import { FlightService } from './flight.service';
+import { FlightService } from './services/flight.service';
 
 @Component({
   selector: 'my-db',

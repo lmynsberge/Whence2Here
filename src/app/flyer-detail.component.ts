@@ -3,8 +3,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
-import { Flyer } from './flyer';
-import { FlightService } from './flight.service';
+import { Flyer } from './objects/flyer';
+import { FlightService } from './services/flight.service';
 
 @Component({
   selector: 'flyer-detail',

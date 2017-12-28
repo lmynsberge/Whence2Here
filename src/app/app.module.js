@@ -13,10 +13,10 @@ var app_component_1 = require("./app.component");
 var flyer_detail_component_1 = require("./flyer-detail.component");
 var flight_detail_component_1 = require("./flight-detail.component");
 var flights_component_1 = require("./flights.component");
-var flight_service_1 = require("./flight.service");
+var flight_service_1 = require("./services/flight.service");
 var dashboard_component_1 = require("./dashboard.component");
-var flight_results_component_1 = require("./flight-results.component");
-var flight_result_component_1 = require("./flight-result.component");
+var flight_results_component_1 = require("./components/search-results/flight-results.component");
+var flight_result_component_1 = require("./components/core/flight-result.component");
 var AppModule = (function () {
     function AppModule() {
     }

@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var flyer_1 = require("./flyer");
-var flight_service_1 = require("./flight.service");
+var flyer_1 = require("./objects/flyer");
+var flight_service_1 = require("./services/flight.service");
 // const FLYERS: Flyer[] = [
 //   { id: 11, name: 'Hannah' },
 //   { id: 12, name: 'Luke' },

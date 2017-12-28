@@ -4,7 +4,7 @@ import { Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
 import { Flight } from './flight';
-import { FlightService } from './flight.service';
+import { FlightService } from './services/flight.service';
 
 @Component({
   selector: 'flight-detail',

@@ -7,10 +7,10 @@ import { AppComponent }  from './app.component';
 import { FlyerDetailComponent } from './flyer-detail.component';
 import { FlightDetailComponent } from './flight-detail.component';
 import { FlightsComponent } from './flights.component';
-import { FlightService } from './flight.service';
+import { FlightService } from './services/flight.service';
 import { DashboardComponent } from './dashboard.component';
-import { FlightResultsComponent } from './flight-results.component';
-import { FlightResultComponent } from './flight-result.component';
+import { FlightResultsComponent } from './components/search-results/flight-results.component';
+import { FlightResultComponent } from './components/core/flight-result.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,

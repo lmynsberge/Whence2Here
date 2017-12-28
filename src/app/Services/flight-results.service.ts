@@ -1,5 +1,5 @@
-import { DESTINATIONRESULTS } from './../Mocks/mock-flight-results';
-import { DestinationResult } from './../Services/DestinationResult';
+import { DESTINATIONRESULTS } from './../mocks/mock-flight-results';
+import { DestinationResult } from './../objects/DestinationResult';
 import { Injectable } from '@angular/core';
 
 @Injectable()
