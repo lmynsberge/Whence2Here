@@ -15,6 +15,8 @@ var flight_detail_component_1 = require("./flight-detail.component");
 var flights_component_1 = require("./flights.component");
 var flight_service_1 = require("./flight.service");
 var dashboard_component_1 = require("./dashboard.component");
+var flight_results_component_1 = require("./flight-results.component");
+var flight_result_component_1 = require("./flight-result.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -44,12 +46,17 @@ AppModule = __decorate([
                 {
                     path: 'flyer/:id',
                     component: flyer_detail_component_1.FlyerDetailComponent
+                },
+                {
+                    path: 'results',
+                    component: flight_results_component_1.FlightResultsComponent
                 }
             ])
         ],
-        declarations: [app_component_1.AppComponent, flyer_detail_component_1.FlyerDetailComponent, flights_component_1.FlightsComponent, dashboard_component_1.DashboardComponent, flight_detail_component_1.FlightDetailComponent],
+        declarations: [app_component_1.AppComponent, flyer_detail_component_1.FlyerDetailComponent, flights_component_1.FlightsComponent, dashboard_component_1.DashboardComponent, flight_detail_component_1.FlightDetailComponent,
+            flight_results_component_1.FlightResultsComponent, flight_result_component_1.FlightResultComponent],
         bootstrap: [app_component_1.AppComponent],
-        providers: [flight_service_1.FlightService]
+        providers: [flight_service_1.FlightService],
     })
 ], AppModule);
 exports.AppModule = AppModule;

@@ -1,0 +1,22 @@
+<div class="flight-details" *ngIf="dest">
+    <div *ngFor="let flyerresult of dest.flyerFlightResult" >
+        <div class="flyer-result">
+            <div class="result-header">
+                {{flyerresult.flyer.name}}
+            </div>
+            <div class="result-content">
+                <div class="result-left">
+                    <a href="">
+                    {{flyerresult.flightResult.startingLocation}} -> {{flyerresult.flightResult.endingLocation}}
+                    </a>
+                </div>
+                <div class="result-right">
+                    ${{flyerresult.flightResult.price}}
+                </div>
+            </div>
+            <div class="result-footer">
+                {{flyerresult.flightResult.startTime}} - {{flyerresult.flightResult.endTime}}
+            </div>
+        </div>
+    </div>
+</div>

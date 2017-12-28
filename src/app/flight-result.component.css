@@ -1,0 +1,31 @@
+.flyer-result {
+    color: black;
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px 1px lightgray;
+    background-color: rgb(223, 30, 30);
+    padding: 5px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+}
+.result-header {
+    font-size: 30px;
+}
+.result-footer {
+    text-align: center;
+    font-size: 24px;
+}
+.result-content {
+    display: inline-block;
+    padding: 10px;
+}
+.result-left {
+    display: inherit;
+}
+.result-right {
+    display: inherit;
+}
+.nodisp {
+    display: none;
+}

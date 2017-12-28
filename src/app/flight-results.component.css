@@ -1,0 +1,39 @@
+.tab-footer {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+.tab-content {
+    border: 2px solid black;
+}
+.tab-header {
+    display: inline-block;
+}
+.tab {
+    /* border: 2px solid black; */
+    margin: 10px;
+}
+.tab-heaer {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab-header div {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab-header div:hover {
+    background-color: #ddd;
+}
+
+.tab-header div.active {
+    background-color: #ccc;
+}

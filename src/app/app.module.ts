@@ -9,6 +9,8 @@ import { FlightDetailComponent } from './flight-detail.component';
 import { FlightsComponent } from './flights.component';
 import { FlightService } from './flight.service';
 import { DashboardComponent } from './dashboard.component';
+import { FlightResultsComponent } from './flight-results.component';
+import { FlightResultComponent } from './flight-result.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
@@ -33,12 +35,17 @@ import { DashboardComponent } from './dashboard.component';
       {
         path: 'flyer/:id',
         component: FlyerDetailComponent
+      },
+      {
+         path: 'results',
+         component: FlightResultsComponent
       }
     ])
    ],
-  declarations: [ AppComponent, FlyerDetailComponent, FlightsComponent, DashboardComponent, FlightDetailComponent ],
+  declarations: [ AppComponent, FlyerDetailComponent, FlightsComponent, DashboardComponent, FlightDetailComponent,
+    FlightResultsComponent, FlightResultComponent ],
   bootstrap:    [ AppComponent ],
-  providers:    [ FlightService ]
+  providers:    [ FlightService ],
 })
 export class AppModule { }
 

@@ -33,10 +33,10 @@
     "@angular/platform-browser-dynamic": "~4.3.4",
     "@angular/router": "~4.3.4",
     "angular-in-memory-web-api": "~0.3.0",
-    "systemjs": "0.19.40",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
-    "zone.js": "^0.8.4"
+    "systemjs": "0.19.40",
+    "zone.js": "^0.8.18"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",

@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var mock_flights_1 = require("./mock-flights");
+var mock_flight_results_1 = require("./Mocks/mock-flight-results");
 var FlightService = (function () {
     function FlightService() {
     }
@@ -19,6 +20,9 @@ var FlightService = (function () {
         return new Promise(function (resolve) {
             setTimeout(function () { return resolve(_this.getFlights()); }, 2000);
         });
+    };
+    FlightService.prototype.getDestinationResults = function () {
+        return Promise.resolve(mock_flight_results_1.DESTINATIONRESULTS);
     };
     return FlightService;
 }());

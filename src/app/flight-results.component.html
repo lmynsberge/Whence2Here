@@ -1,0 +1,16 @@
+<h3>Searching...</h3>
+<div>
+  <div *ngFor="let dest of destinations" class="tab-header">
+    <div class="tab-link" (click)="onSelect(dest.destination)">{{dest.destination}}</div>
+  </div>
+  <div *ngIf="activeDestination">
+    <div class="tab-content" id="tab-content">
+      <flight-result [dest]="activeDestination"></flight-result>
+    </div>
+    <div class="tab-footer">
+      Total: {{activeDestination.totalCost}}
+      First Arrival: {{activeDestination.firstArrive}}
+      Last Arrival: {{activeDestination.lastArrive}}
+    </div>
+  </div>
+</div>
